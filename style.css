@@ -1,0 +1,150 @@
+body {
+    background-image: url("./images/canvas.jpeg");
+    background-size: auto;
+    color: aliceblue;
+    margin: 0;
+ }
+
+ .grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+ }
+
+ .col {
+    display: grid;
+    grid-template-rows: 25% auto 20%;
+    grid-template-columns: 1fr;
+ }
+
+ .wrapper {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.goods_item {
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.name, .lastname, button{
+    padding: 5px;
+    border: 1px solid;
+    border-color: white;
+}
+
+/* "Живая" кнопка РАССЧИТАТЬ*/
+.button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input {
+    font-size: 15px;
+    height: 16px;
+    width: 40px;
+    text-align: center;
+    border: 1px solid;
+    border-color: white;
+
+    position: relative;
+    vertical-align: middle;
+    left: 50px;
+}
+label {
+    width: 200px;
+    position: static;
+    left: -20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* Стили для модального окна */
+
+.modal-container {
+	pointer-events: none; 
+    opacity: 0;
+	position: fixed;
+    z-index: -1;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	padding: 30px;
+	background-color: rgba(0, 0, 0, 0);
+    transition: opacity .3s, background-color .5s;
+}
+
+.is-open {
+	opacity: 1;
+	pointer-events: all;
+    z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+	overflow: auto;
+	width: 100%; 
+    height:fit-content;
+    max-width: 400px; 
+    max-height: 300px;
+	padding: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+.close {
+	position: absolute;
+	right: 40;
+	top: 60;
+	width: 40px;
+	height: 40px;
+    background-color: #fff;
+    border: solid 1px rgb(143, 74, 74);
+    border-radius: 3px;
+    color: rgb(143, 74, 74);
+}
+
+/* "Живая" кнопка ЗАКРЫТЬ("Х") модальное окно*/
+.close:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.modal-text {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    background-color: #fff;
+    color:black;
+}
+
+.modal-header {
+    display: flex;
+	justify-content: center;
+    background-color: #fff;
+    color:rgb(143, 74, 74);
+}
